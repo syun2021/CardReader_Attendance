@@ -2,7 +2,6 @@ from smartcard.CardMonitoring import CardMonitor, CardObserver
 from smartcard.util import toHexString
 from smartcard.System import readers as get_readers
 
-#sleepのインポート
 from time import sleep
 from tkinter import messagebox as mbox
 import datetime
