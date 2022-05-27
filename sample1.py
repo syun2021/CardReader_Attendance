@@ -85,7 +85,7 @@ class PrintObserver(CardObserver):
 
             try:
                 df = pd.read_csv(f"./ATTEND/{datetime.date.today()}.csv")
-                if not name in df["names"]:
+                if not (df["names"]==name).any():
                     df["names"].append(name)
                     df["rank"].append(rank)
                     df["time"].append(datetime.datetime.now().strftime("%H:%M"))
